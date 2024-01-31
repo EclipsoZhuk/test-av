@@ -4,7 +4,6 @@ import Header from "../components/Header";
 import { Container } from "@mui/material";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
-import cabinetBg from "../assets/cabinet-bg.webp";
 
 const Layout: FC = () => {
   const navigate = useNavigate();
@@ -18,27 +17,22 @@ const Layout: FC = () => {
   }, [navigate, user]);
 
   return (
-    <>
+    <div>
       <Header />
       <Container
         maxWidth={false}
         sx={{
           height: "100%",
-          pt: "50px",
+          py: "50px",
           backgroundColor: { xs: "#fff", md: "#f4f4f4" },
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-
-          backgroundImage: `url(${cabinetBg})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
         }}
       >
         <Outlet />
       </Container>
-    </>
+    </div>
   );
 };
 

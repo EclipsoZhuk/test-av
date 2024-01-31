@@ -130,7 +130,7 @@ const LoginPage: FC = () => {
               container
               sx={{
                 boxShadow: { sm: "0 0 5px #ddd" },
-                py: "6rem",
+                py: "4rem",
                 px: "1rem",
               }}
             >
